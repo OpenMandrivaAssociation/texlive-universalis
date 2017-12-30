@@ -5,8 +5,8 @@
 # catalog-license gpl2
 # catalog-version undef
 Name:		texlive-universalis
-Version:	20140505
-Release:	4
+Version:	20170414
+Release:	1
 Summary:	Universalis font, with support
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/universalis
