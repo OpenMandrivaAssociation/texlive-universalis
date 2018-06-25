@@ -5,7 +5,7 @@
 # catalog-license gpl2
 # catalog-version undef
 Name:		texlive-universalis
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	Universalis font, with support
 Group:		Publishing
