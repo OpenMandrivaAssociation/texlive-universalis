@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-universalis
 Version:	20180303
-Release:	1
+Release:	2
 Summary:	Universalis font, with support
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/universalis
