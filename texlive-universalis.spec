@@ -1,18 +1,12 @@
-# revision 33860
-# category Package
-# catalog-ctan /fonts/universalis
-# catalog-date 2014-05-05 17:01:15 +0200
-# catalog-license gpl2
-# catalog-version undef
 Name:		texlive-universalis
-Version:	20190228
+Version:	64505
 Release:	1
 Summary:	Universalis font, with support
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/universalis
 License:	GPL2
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/universalis.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/universalis.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/universalis.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/universalis.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,12 +19,12 @@ Hirwin Harendal. The font is suitable as an alternative to
 fonts such as Adrian Frutiger's Univers and Frutiger.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -197,7 +191,7 @@ fonts such as Adrian Frutiger's Univers and Frutiger.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
