@@ -3,7 +3,7 @@ Version:	64505
 Release:	2
 Summary:	Universalis font, with support
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/universalis
+URL:		https://www.ctan.org/tex-archive/fonts/universalis
 License:	GPL2
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/universalis.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/universalis.doc.r%{version}.tar.xz
