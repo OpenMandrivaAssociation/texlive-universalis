@@ -12,7 +12,8 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/universalis.r%{t
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/universalis.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 This package provides LaTeX, pdfLaTeX, XeLaTeX and LuaLaTeX support for
@@ -20,3 +21,10 @@ the UniversalisADFStd family of fonts, designed by Hirwin Harendal. The
 font is suitable as an alternative to fonts such as Adrian Frutiger's
 Univers and Frutiger.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from universalis:
+Map universalis.map
+TL_DROPIN_EOF
